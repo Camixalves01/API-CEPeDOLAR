@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'roboto', 'sans-serif';
+}
+
+/* utility classes*/
+.btn-primary {
+    background: #d34bd8;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    background-color: rgba( 0,0,0,0.6 );
+    color: white;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#navbar .navbar-container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+#navbar .navbar-container ul {
+    display: flex;
+    list-style: none;
+    font-weight: bold;   
+}
+#navbar .navbar-container ul li {
+    padding: 0 10px;
+} 
+#navbar .navbar-items a {
+    color: aliceblue;
+}
+
+/* Showcase */
+#showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("https://www.aquila-capital.de/fileadmin/_processed_/a/9/csm_assets-data-center_84e24c7e12.jpg") center center/cover;
+    background-color: rgba( 0,0,0,0.10 );
+    background-blend-mode: color;
+
+}
+#showcase .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#showcase .showcase-container h2 {
+    font-size: 5rem;
+    margin-top: 100px;
+}
+
+#showcase .showcase-container h3 {
+    background-color: rgba(0, 0, 0, 0.548);
+    font-size: 1.15rem;
+}
+
+
+#showcase .showcase-cep{
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 10px 0;
+    font-size: 1.1rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-variant: small-caps;
+}
+
+#showcase .showcase-dolar{
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 15px 0;
+    font-size: 1.10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-weight:bold;
+}
+
+.inputBox {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+/* Footer */
+
+#footer {
+    background: black;
+    color: white;
+}
+
+#footer .footer-content {
+    display: flex;
+    width: 5%;
+    margin: auto;
+    padding: 30px 0;  
+}

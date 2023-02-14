@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>API-DOLLAR</title>
+</head>
+<body>
+    <!--Navbar-->
+
+    <navbar id="navbar"> 
+        <div class="navbar-container">
+            <img src="imagens/logo.png" alt="" class="logo"/>
+            <ul class="navbar-items"> 
+                <a href="Cep.html"><li class="navbar-item">CEP</li></a>
+                <a href="Dolar.html"><li class="navbar-item">DOLAR</li></a>
+                <a href="index.html"><li class="navbar-item">INICIO</li></a>
+            </ul>
+        </div>
+    </navbar>
+    <!--Showcase-->
+
+    <div id="showcase">
+        <div class="showcase-container">
+            <h2>API DOLAR</h2>
+            <h3>Veja o valor do dólar em tempo real</h3>   
+            <br>
+            <div class="showcase-dolar">
+                <div class="inputBox">
+                    <input type="text" id="dolar"  class="inputUser" readonly>
+                </div> <br><br>
+        
+                <div class="inputBox">
+                    <div id="moeda" class="moeda_bra"></div>
+                </div> <br><br>
+        
+             </div>
+            <a href="index.html"><button class="btn-primary">Voltar</button></a>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer id="footer"> 
+        <div class="footer-content"> 
+            <img src="imagens/logo.png" alt="" class="logo">       
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+            
+    <script src="https://kit.fontawesome.com/41c67a60df.js" crossorigin="anonymous"></script>
+    <script>
+        fetch (`https://economia.awesomeapi.com.br/json/last/USD-BRL`).then(response => {
+        return response.json()
+    }).then(economia => {
+            console.log(economia)
+            document.getElementById("dolar").value = economia.USDBRL.bid;
+            document.getElementById("moeda").innerHTML = economia.USDBRL.code;
+    
+           
+    })</script>
+
+</body>
+</html>
